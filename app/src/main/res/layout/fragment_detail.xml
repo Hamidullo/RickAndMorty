@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/containerIV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.02"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:cardCornerRadius="36dp"
+            app:cardElevation="16dp"
+            android:layout_width="180dp"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/detailIVCharacter"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+
+       <LinearLayout
+           android:orientation="vertical"
+           app:layout_constraintStart_toEndOf="@id/containerIV"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="@id/containerIV"
+           app:layout_constraintBottom_toBottomOf="@id/containerIV"
+           android:layout_margin="16dp"
+           android:layout_width="0dp"
+           android:layout_height="0dp">
+
+           <TextView
+               android:id="@+id/detailNameCharacter"
+               android:layout_weight="1"
+               android:text="Name"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:textSize="20sp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/detailStatusCharacter"
+               android:layout_weight="1"
+               android:text="Status"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:textSize="20sp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/detailSpeciesCharacter"
+               android:layout_weight="1"
+               android:text="Species"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:textSize="20sp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:layout_weight="2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/containerIV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Location:"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/detailTVLocCharacter"
+                    android:text="Location:"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Gender:"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/detailGenderCharacter"
+                    android:layout_weight="1"
+                    android:text="Gender"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Type:"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/detailTypeCharacter"
+                    android:layout_weight="1"
+                    android:text="Type"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginVertical="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="EpisodeCount:"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/detailEpisodeCountCharacter"
+                    android:layout_weight="1"
+                    android:text="EpisodeCount"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
